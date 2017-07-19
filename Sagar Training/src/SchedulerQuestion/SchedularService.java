@@ -78,13 +78,18 @@ public class SchedularService implements ISchedularService {
 		
 		if(d.getGames()[0] == null) {
 			sb2.append("Day's game list should not be null"); // Check if game list of Day is null
+			return sb2.toString();
 		}
 		
 		if(d.getName().isEmpty()) {
 			sb2.append("Day name should not be empty"); // Check if day object passed does not have a day name
+			return sb2.toString();
 		}
 		
 		for(int i=0; i<d.getGames().length; i++) { // Check if the game exist in the game repository
+			if(d.getGames()[i] == null) {
+				break;
+			}
 			if(gameR.findOne(d.getGames()[i].getName()) != null) { //if findOne finds a match, it returns a game object which is non-null
 				dayGameExistInGameList = true; 
 				}
