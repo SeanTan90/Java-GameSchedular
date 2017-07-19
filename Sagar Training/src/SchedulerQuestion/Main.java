@@ -70,7 +70,7 @@ public class Main {
 		
 //		System.out.println(service.gameWiseReport("basketball"));
 //		System.out.println(service.playerWiseReport("tom"));
-		System.out.println(service.dayWiseReport("day2"));
+//		System.out.println(service.dayWiseReport("day2"));
 	}
 
 }

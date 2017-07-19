@@ -109,10 +109,18 @@ public class SchedularService implements ISchedularService {
 		Player[] playerList = playerR.findAll();
 		Day[] dayList = dayR.findAll();
 		
+		if(gameName.equals("")) {
+			sb3.append("Game's name should not be empty");
+			return sb3;
+		}	
+		
+		
 		if(gameR.findOne(gameName) == null) {
 			sb3.append("Game does not exist in game repository");
 			return sb3;
 		}
+		
+		
 
 
 		for (int i = 0; i < playerList.length; i++) {
@@ -154,6 +162,18 @@ public class SchedularService implements ISchedularService {
 		Player playerObject = playerR.findOne(playerName);
 		Day[] dayList = dayR.findAll();
 		
+		if(playerName.equals("")) {
+			sb4.append("Player's name should not be empty");
+			return sb4;
+		}	
+		
+		
+		if(playerR.findOne(playerName) == null) {
+			sb4.append("Player does not exist in player repository");
+			return sb4;
+		}
+		
+		
 		Game[] gameListOfPlayer = playerObject.getGames();
 		
 		for(int i=0; i< gameListOfPlayer.length; i++) {
@@ -181,6 +201,18 @@ public class SchedularService implements ISchedularService {
 		StringBuffer sb5 = new StringBuffer(40);
 		Day dayObject = dayR.findOne(dayName);
 		Player[] playerList = playerR.findAll();
+		
+		if(dayName.equals("")) {
+			sb5.append("Day's name should not be empty");
+			return sb5;
+		}		
+		
+		if(dayR.findOne(dayName) == null) {
+			sb5.append("Day does not exist in day repository");
+			return sb5;
+		}
+		
+		
 
 		Game[] gameListOfDay = dayObject.getGames();
 
