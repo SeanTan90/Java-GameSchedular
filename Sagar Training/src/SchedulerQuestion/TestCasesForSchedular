@@ -1,0 +1,102 @@
+Given: User wants add a duplicate game in system.
+When: He passes duplicate game to system.
+Then: System should not create the game and passes a rejection message.
+
+Given: User wants add a duplicate player in system.
+When: He passes duplicate player to system.
+Then: System should not create the player and passes a rejection message.
+
+Given: User wants add a duplicate day in system.
+When: He passes duplicate day to system.
+Then: System should not create the day and passes a rejection message.
+
+
+
+
+
+Given: User wants add a null game in system.
+When: He passes game reference without initializing to system.
+Then: System should not create the game and passes a rejection message.
+
+Given: User wants add a null player in system.
+When: He passes player reference without initializing to system.
+Then: System should not create the player and passes a rejection message.
+
+Given: User wants add a null day in system.
+When: He passes day reference without initializing to system.
+Then: System should not create the day and passes a rejection message.
+
+
+
+
+
+Given: User wants add a game in system.
+When: He passes game name to the system.
+Then: System should create the game with name Basketball. 
+
+Given: User wants add a player in system.
+When: He passes player name to the system.
+Then: System should create the player with name John.
+
+Given: User wants add a day in system.
+When: He passes day name to the system.
+Then: System should create the day with name Day1.
+
+
+
+
+
+Given: User wants receive the gameWiseReport.
+When: He passes in a game name to the system.
+Then: System should return the gameWiseReport which contains the players and days the game is played.
+
+Given: User wants receive the playerWiseReport.
+When: He passes in a player name to the system.
+Then: System should return the playerWiseReport which contains the games and days the player plays.
+
+Given: User wants receive the dayWiseReport.
+When: He passes in a day name to the system.
+Then: System should return the gameWiseReport which contains the players and games on the day.
+
+
+
+
+
+
+
+
+
+Given: User wants add a game with no players into the system.
+When: He passes a game name without the players to the system.
+Then: System should not add the game to the system and pass a rejection message telling the user to include the number of players for the game.
+
+Given: User wants add a game with no days into the system.
+When: He passes a game name without the days to the system.
+Then: System should not add the game to the system and pass a rejection message telling the user to include the days the game is played.
+
+Given: User wants add a player with no games into the system.
+When: He passes a player name without the games to the system.
+Then: System should not add the player to the system and pass a rejection message telling the user to include the name of the game that the players play.
+
+Given: User wants add a player with no days into the system.
+When: He passes a player name without the days to the system.
+Then: System should not add the player to the system and pass a rejection message telling the user to include the day the player plays.
+
+
+Given: User wants add a day with no players into the system.
+When: He passes a day name without the players to the system.
+Then: System should not add the day to the system and pass a rejection message telling the user to include the players that play on that day.
+
+Given: User wants add a day with no games into the system.
+When: He passes a day name without the games to the system.
+Then: System should not add the day to the system and pass a rejection message telling the user to include the games on the day that is played.
+
+
+
+
+
+
+
+
+
+
